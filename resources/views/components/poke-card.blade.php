@@ -9,12 +9,13 @@
             </a>
             <p class="mb-5">
                 @foreach ($types as $type)
-                    <span
-                        class="bg-[#{{ $type->color }}] text-slate-200 text-md font-medium me-2 px-3 py-1 rounded-full">{{ $type->name }}</span>
+                    @component('components.TypeBadge', ['color' => $type->color, 'size' => 'md',  'id' => $type->id, 'name' => $pokemon->name])
+                        {{ $type->name }}
+                    @endcomponent
                 @endforeach
             </p>
             <a href="/pokedex/{{ $pokemon->id }}"
-                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
+                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 transition duration-300">
                 Aprender más
                 <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                     fill="none" viewBox="0 0 14 10">

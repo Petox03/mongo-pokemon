@@ -19,15 +19,12 @@
                     <span class="block text-sm text-gray-900 ">Entrenador Pokémon</span>
                 </div>
                 <ul class="py-2" aria-labelledby="user-menu-button">
-                    <li>
-                        <a href="#"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</a>
-                    </li>
-                    <li>
+                    @component('components.userlink', ['url' => 'hunting'])
+                        Cazería
+                    @endcomponent
+                    @component('components.userlink', ['url' => 'pc'])
+                        Mis pokémon
+                    @endcomponent
                 </ul>
             </div>
             <button data-collapse-toggle="navbar-user" type="button"
