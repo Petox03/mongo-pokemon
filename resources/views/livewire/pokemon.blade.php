@@ -1,4 +1,7 @@
 <section>
+    <input type="search" id="default-search" wire:model.live="search"
+        class="mb-5 block w-full ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+        placeholder="¿Qué estás buscando?" />
     <div class="mb-4 flex justify-center">
         @foreach ($types as $type)
             @component('components.TypeBadge', ['color' => $type->color, 'size' => 'sm', 'id' => $type->id])
