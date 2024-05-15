@@ -20,7 +20,7 @@
     </header>
 
     <main class="relative top-[4rem] p-5">
-        a
+        
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>

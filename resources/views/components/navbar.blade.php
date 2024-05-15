@@ -44,9 +44,6 @@
                 @component('components.navlink', ['url' => '/'])
                     Inicio
                 @endcomponent
-                @component('components.navlink', ['url' => 'pokedex'])
-                    Pokédex
-                @endcomponent
             </ul>
         </div>
     </div>

@@ -13,4 +13,12 @@ class Ability extends Model
         'effect'
     ];
 
+    public function pokemon(){
+        return $this->belongsTo(Pokemon::class);
+    }
+
+    public function pc(){
+        return $this->hasMany(Pc::class);
+    }
+
 }

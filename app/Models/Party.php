@@ -8,11 +8,11 @@ use MongoDB\Laravel\Eloquent\Model;
 class Party extends Model
 {
     use HasFactory;
-
-    protected $fillable = ['pokemon_id', 'current_ability', 'gender'];
+    
+    protected $table = 'party';
 
     public function pokemon()
     {
-        return $this->belongsTo(Pokemon::class);
+        return $this->hasMany(Pokemon::class);
     }
 }
