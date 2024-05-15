@@ -9,10 +9,27 @@ use Livewire\Component;
 class Pc extends Component
 {
     public $myMons;
+    public $newName = '';
+
+    public function getListeners(): array
+    {
+        return [
+            "pokemonChanged" => 'render',
+        ];
+    }
 
     public function mount()
     {
         $this->myMons = ModelsPc::all();
+    }
+
+    public function changeName($id){
+        $mon = ModelsPc::find($id);
+        $mon->name = $this->newName;
+        $mon->save();
+        $this->myMons = ModelsPc::all();
+        $this->newName = '';
+        $this->dispatch('pokemonChanged');
     }
 
     public function delete($id)
