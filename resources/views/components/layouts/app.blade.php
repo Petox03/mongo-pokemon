@@ -32,6 +32,13 @@
                     icon: "info"
                 });
             });
+            Livewire.on('pokemonChanged', () => {
+                Swal.fire({
+                    title: "El nombre del pokemon ha cambiado",
+                    text: "Ahora tiene un apodo cool",
+                    icon: "info"
+                });
+            });
             Livewire.on('catch', function(data){
                 Swal.fire({
                     title: data.msg,

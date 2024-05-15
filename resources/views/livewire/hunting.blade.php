@@ -1,9 +1,9 @@
 <div class="grid grid-cols-12 gap-4">
     @foreach ($pokemon as $item)
+    @for ($i = 0; $i < rand(2, 12); $i++)
+        <div class="col-span-1"></div>
+    @endfor
         <div wire:key='pokemon-{{ $item->_id }}'>
-            @for ($i = 0; $i < rand(2, 12); $i++)
-                <div class="col-span-1"></div>
-            @endfor
 
             <div>
                 <img wire:key='pokemon-{{ $item->_id }}' data-modal-target="{{ $item->name }}-modal" data-modal-toggle="{{ $item->name }}-modal"
@@ -46,9 +46,9 @@
             </div>
 
 
-            @for ($i = 0; $i < rand(2, 5); $i++)
-                <div class="col-span-1"></div>
-            @endfor
         </div>
+        @for ($i = 0; $i < rand(2, 5); $i++)
+            <div class="col-span-1"></div>
+        @endfor
     @endforeach
 </div>

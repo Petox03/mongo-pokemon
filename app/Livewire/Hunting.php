@@ -27,10 +27,10 @@ class Hunting extends Component
 
     public function catch($id)
     {
-        $randomCatch = rand(1, 100);
+        $randomCatch = rand(1, 3);
         $randomReset = rand(1, 6);
 
-        if ($randomCatch <= 100) {
+        if ($randomCatch == 2) {
             $pokemon = Pokemon::find($id);
 
             $abilityId = $pokemon->abilitie_ids[array_rand($pokemon->abilitie_ids)];
